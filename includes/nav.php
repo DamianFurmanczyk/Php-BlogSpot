@@ -24,7 +24,7 @@
         <a class="nav-link" href="#">Pricing</a>
         </li>
         <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Blog Subjects</a>
+        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kategorie</a>
         <div class="dropdown-menu" aria-labelledby="dropdownId">
             <?php 
                 while($subject = mysqli_fetch_assoc($subjects_result)) 

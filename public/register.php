@@ -17,15 +17,15 @@
               </div>
           </div>
           <div class="form-group row mt-4">
-              <div class="offset-md-4 offset-lg-5 col-md-6 col-lg-4">
+              <div class="offset-md-3 offset-lg-4 col-md-7 col-lg-5">
                 <div class="row">
-                    <div class="col-7">
-                    <div class="custom-control custom-checkbox mr-sm-2">
-                        <input type="checkbox" name="privacy" class="custom-control-input" id="privacy">
-                        <label class="custom-control-label" for="privacy">Konto prywatne</label>
+                    <div class="col-6">
+                    <div class="custom-control custom-checkbox mr-2 mt-2">
+                        <input type="checkbox" name="private" class="custom-control-input" id="private">
+                        <label class="custom-control-label" for="private">Konto prywatne</label>
                     </div>
                     </div>
-                  <div class="col-5">
+                  <div class="col-6">
                     <button type="submit" class="btn btn-primary btn-block">Rejestracja</button>
                   </div>
                 </div>

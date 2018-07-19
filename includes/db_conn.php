@@ -1,3 +1,3 @@
 <?php
-    $db = mysqli_connect('localhost', 'root', '', 'cms')
+    $db = new mysqli('localhost', 'root', '', 'cms')
     or die('Error connecting to MySQL server.');

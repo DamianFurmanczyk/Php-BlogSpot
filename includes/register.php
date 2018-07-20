@@ -31,7 +31,11 @@
 
             if(mysqli_query($db, $sql)) {
 
-                login($username, $password, $private);
+                $id_sql = "SELECT id FROM users WHERE `username` = '$username'";
+                $result = $db->query($id_sql);
+                $id = $result->fetch_assoc()['id'];
+
+                login($id, $username, $password, $private);
 
                 flash("Użytkownik został zarejestrowany.", "success", "../public/profile.php");
             } else {

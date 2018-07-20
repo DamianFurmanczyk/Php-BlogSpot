@@ -24,7 +24,7 @@
 
         <?php if (isset($_SESSION['message'])) {
           print('
-          <div class="text-center mb-3 col-sm-12 col-md-6 offset-md-3 alert alert-'.$_SESSION['message_type'].'" role="alert">
+          <div id="notification" class="text-center mb-3 col-sm-12 col-md-6 offset-md-3 alert alert-'.$_SESSION['message_type'].'" role="alert">
             <strong>' . $_SESSION['message'] . '</strong>
           </div>');
         }

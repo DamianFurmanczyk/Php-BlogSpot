@@ -34,6 +34,14 @@
 
     if(isset($_SESSION['username'])) {
 
+        $current_uri_file = basename($_SERVER['REQUEST_URI']);
+
+        if($current_uri_file != 'profile.php') {
+            print('
+                <a href="profile.php" class="btn btn-outline-light my-2 mr-2 my-sm-0">Mój profil</a>
+            ');
+        }
+
         print('
             <a href="../includes/logout.php" class="btn btn-outline-light my-2 mr-2 my-sm-0">Wyloguj się</a>
         ');

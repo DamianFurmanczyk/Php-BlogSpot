@@ -21,7 +21,7 @@
         $password_verified = password_verify($password, $row['password']);
         if($password_verified) {
 
-            login($row['username'], $row['password'], $row['private']);
+            login($row['id'], $row['username'], $row['password'], $row['private'], $row['id']);
             flash('Zalogowano', 'success', '../public/profile.php');
         } else {
             

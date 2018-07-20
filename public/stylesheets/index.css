@@ -2,6 +2,10 @@ body {
     background: #fdfdfd;
 }
 
+.posts button {
+    float: right;
+}
+
 main {
     min-height: 100vh;
     justify-content: space-between;
@@ -15,4 +19,12 @@ main {
 
 .card-text {
     font-size: 1.4rem;
+}
+
+#add-post-form {
+    display: none;
+}
+
+#add-post-form.active {
+    display: block;
 }

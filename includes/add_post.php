@@ -12,6 +12,6 @@
 
     $succ = $db->query($sql);
 
-    if(!$succ) flash('Nie udało się dodać posta', 'danger', '../public/profile.php');
+    if(!$succ) flash('Nie udało się dodać posta', 'danger', '../public_html_html/profile.php');
 
-    flash('Post został dodany', 'success', '../public/profile.php');
+    flash('Post został dodany', 'success', '../public_html_html/profile.php');

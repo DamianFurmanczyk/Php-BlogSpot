@@ -1,7 +1,7 @@
 <?php
-  include('../includes/db_conn.php');
+  include_once('../includes/db_conn.php');
   session_start();
-  include('../includes/functions.php');
+  include_once('../includes/functions.php');
 ?>
 
 <!doctype html>
@@ -17,16 +17,12 @@
   </head>
   <body>
     <main>
-        <?php include('../includes/modal.php') ?>
         <?php include('../includes/nav.php') ?>
 
         <div class="container mt-5">
 
         <?php if (isset($_SESSION['message'])) {
-          print('
-          <div id="notification" class="text-center mb-3 col-sm-12 col-md-6 offset-md-3 alert alert-'.$_SESSION['message_type'].'" role="alert">
-            <strong>' . $_SESSION['message'] . '</strong>
-          </div>');
+          display_message($_SESSION['message'], $_SESSION['message_type']);
         }
         
         unset($_SESSION['message']);

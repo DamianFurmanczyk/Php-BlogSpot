@@ -13,7 +13,7 @@
               </div>
               <div class="offset-md-2 offset-lg-3 col-sm-12 col-md-8 col-lg-6">
               <label for="password-confirm" class="col-sm-12 col-form-label">Potwierdź hasło:</label>
-                  <input type="password-confirm" class="form-control" name="password-confirm" id="password-confirm" >
+                  <input type="password" class="form-control" name="password-confirm" id="password-confirm" >
               </div>
           </div>
           <div class="form-group row mt-4">

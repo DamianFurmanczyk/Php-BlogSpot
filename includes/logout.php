@@ -4,4 +4,4 @@
     
     session_destroy();
     session_start();
-    flash('Wylogowano', 'info', '../public/index.php');
+    flash('Wylogowano', 'info', '../public_html/index.php');

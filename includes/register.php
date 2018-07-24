@@ -11,19 +11,19 @@
 
     if($password != $password_confirm) {
         
-        flash("Podane hasła nie są jednakowe.", "warning", "../public/register.php");
+        flash("Podane hasła nie są jednakowe.", "warning", "../public_html/register.php");
     }
 
     if (empty($username) || empty($password) || empty($password_confirm)) {
 
-        flash("Nie podano wszystkich wymaganych informacji.", "warning", "./public/register.php");
+        flash("Nie podano wszystkich wymaganych informacji.", "warning", "./public_html/register.php");
     } else {
 
         $sql = "SELECT * FROM `users` WHERE username = '$username'" ;
         $user_alredy_in_db_result = mysqli_query($db, $sql);
         
         if(mysqli_num_rows($user_alredy_in_db_result) > 0) {
-            flash("Podana nazwa użytkownika jest zajęta.", "warning", "../public/register.php");
+            flash("Podana nazwa użytkownika jest zajęta.", "warning", "../public_html/register.php");
         } else {
 
             $sql = "INSERT INTO users (username, password, private)
@@ -37,10 +37,10 @@
 
                 login($id, $username, $password, $private);
 
-                flash("Użytkownik został zarejestrowany.", "success", "../public/profile.php");
+                flash("Użytkownik został zarejestrowany.", "success", "../public_html/profile.php");
             } else {
 
-                flash("Nie udało się zarejestrować użytkownika.", "danger", "../public/profile.php");
+                flash("Nie udało się zarejestrować użytkownika.", "danger", "../public_html/profile.php");
             }
 
         }

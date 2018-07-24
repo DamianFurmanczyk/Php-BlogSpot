@@ -2,6 +2,20 @@ body {
     background: #fdfdfd;
 }
 
+footer {
+    background: #007BFF;
+    padding: 20px 0;
+}
+
+footer a,
+footer a:hover {
+    color: #fff;
+}
+
+.fa-minus-circle {
+    cursor: pointer;
+}
+
 .posts button {
     float: right;
 }

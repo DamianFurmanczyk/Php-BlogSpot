@@ -60,7 +60,7 @@
         <div class="clearfix mb-5"></div>
 
       <?php 
-        render_posts($db, $_SESSION['id']); 
+        render_posts($db, $_SESSION['id'], true); 
       ?>
   </div>
 

@@ -1,7 +1,7 @@
 <?php
     include('db_conn.php');
 
-    $query = 'Select username from users where private=0 order by id';
+    $query = 'Select username, id from users where private=0 order by id';
     $users_result = mysqli_query($db, $query);
 ?>
 
@@ -13,7 +13,7 @@
     <div class="collapse navbar-collapse" id="navbarText">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="../public/index.php">Home</a>
+            <a class="nav-link" href="../public_html/index.php">Home</a>
         </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Użytkownicy</a>
@@ -22,11 +22,11 @@
                 while($user = mysqli_fetch_assoc($users_result)) 
                 {
             ?>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/_projects/cms/public_html/user.php?id=<?= $user['id'] ?>">
                     <?= $user['username'] ?>
                 </a>
             <?php } ?>
-            <a href="/public/users" class="dropdown-item">Zobacz więcej</a>
+            <a href="/public_html/users" class="dropdown-item">Zobacz więcej</a>
         </div>
         </li>
     </ul>
